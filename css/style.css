@@ -69,28 +69,25 @@ body {
 .about-me-slide-class {
   height: 100%;
   width: 0;
-
   position: fixed;
   z-index: 2;
-
   top: 0;
   left: 0;
-
-  background: orange;
+  background: black;
   overflow-x: hidden;
   transition: 0.1s;
 }
 
 .exit-logo-class {
-  top: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
   right: 0;
-  transform: rotate(270deg);
-  background: blue;
 }
 
 #exit-about-me-link-id {
-  padding:20px;
-  font-size: 60px;
+  padding:10px;
+  font-size: 40px;
   text-decoration: none;
   color: white;
 }
@@ -99,8 +96,20 @@ body {
   color: gray;
 }
 
-#inside-text {
+.about-me-slide-text-class{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  text-align: center;
   color: white;
+}
+
+.about-me-slide-text-class h1{
+    top: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    padding: 30px;
 }
 
 ul {
