@@ -1,6 +1,11 @@
+const typeit = window.typeit;
+
 function openAboutMe(){
 	document.getElementById("about-me-slide-id").style.width = "93%";
-	console.log("Set 1");
+}
+
+function closeAboutMe(){
+	document.getElementById("about-me-slide-id").style.width = "0";
 }
 
 function setSpin(id){
