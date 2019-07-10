@@ -15,7 +15,7 @@ body {
   -webkit-animation:zoomin 1.6s linear 1;
 } 
 
-.left-side-nav {
+.right-side-nav {
   height: 100%;
   width: 70px;
   position: absolute;
@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
 }
 
-.right-side-nav {
+.left-side-nav {
   height: 100%;
   width: 600px;
   position: absolute;
@@ -75,7 +75,7 @@ body {
   left: 0;
   background: black;
   overflow-x: hidden;
-  transition: 0.1s;
+  transition: 0.4s;
 }
 
 .exit-logo-class {
