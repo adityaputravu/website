@@ -4,8 +4,12 @@ body {
 	color: white;
 }
 
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .mid-section {
-	font-size: 150px;
+	font-size: 220px;
 
 	position: absolute;
 	left: 50%;
@@ -14,6 +18,56 @@ body {
 	transform: translate(-50%, -50%);
   -webkit-animation:zoomin 1.6s linear 1;
 } 
+
+#name {
+  color: white;
+  text-decoration: none;
+}
+
+.entries-class {  
+  position: absolute;
+  font-size: 0px;  /* SET THIS TO 140px when entries are clicked */ 
+}
+
+.entries-class ul {
+  list-style-type: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160%;
+  background-color: black;
+}
+
+.entries-class li {
+  text-align: center;
+  padding: 0px;
+}
+
+#close-list {
+  text-align: left;
+  right: 44%;
+  transform: translate(44%, 0%);
+}
+
+#close-list-link:hover {
+  color: grey;
+}
+
+.entries-class li a{
+  position: relative;
+  color: white;
+  list-style-type: none;
+  margin: 0;
+  text-decoration: none;
+  background-color: black;
+  transform: scale(1);
+}
+
+.entries-class li a:hover {
+  background-color: black;
+  color: orange;
+  transform: scale(2);
+}
 
 .right-side-nav {
   height: 100%;
@@ -66,7 +120,7 @@ body {
   color: gray;
 }
 
-.about-me-slide-class {
+.panel-slide-class {
   height: 100%;
   width: 0;
   position: fixed;
@@ -78,7 +132,14 @@ body {
   transition: 0.4s;
 }
 
+.panel-slide-class h1 {
+  top: 20%;
+  font-size: 60px;
+  padding: 30px;
+}
+
 .exit-logo-class {
+  display: block;
   position: absolute;
   top: 50%;
   transform: translate(0%, -50%);
@@ -105,14 +166,32 @@ body {
   color: white;
 }
 
-.about-me-slide-text-class h1{
-    top: 20%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
-    padding: 30px;
+.blog-ecsc-2019-class {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  color: white;
+  width: 80%;
+}
+.blog-ecsc-2019-class p {
+  font-family: 'Raleway', sans-serif;
+  text-align: justify;
 }
 
-ul {
+.blog-exchange-2019-class {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  color: white;
+}
+
+.social-link ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -120,16 +199,17 @@ ul {
 	background-color: black;
 }
 
-li a {
+.social-link li a {
 	display: block;
 	padding: 20px 16px;
 	text-decoration: none;
 }
 
-li a:hover {
+.social-link li a:hover {
 	background-color: black;
 	color: white; 
 }
+
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
@@ -140,11 +220,17 @@ li a:hover {
   50% {transform: translate(-50%, -50%) scale(0.5);}
   100% {transform: translate(-50%, -50%) scale(1);}
 }
+
 @keyframes zoomin {
   0% {transform: translate(-50%, -50%)  scale(0);}
   50% {transform: translate(-50%, -50%) scale(0.5);}
   100% {transform: translate(-50%, -50%) scale(1);}
 } 
+@-webkit-keyframes unblowup {
+  0% {transform: translate(-50%, -50%)  scale(1.5);}
+  50% {transform: translate(-50%, -50%) scale(1.2);}
+  100% {transform: translate(-50%, -50%) scale(1.5);}
+}
 
 @keyframes fadein{
   from {opacity: 0;}
