@@ -127,7 +127,7 @@ a {
 .panel-slide-class {
   height: 100%;
   width: 0;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   top: 0;
   left: 0;
@@ -143,15 +143,14 @@ a {
 }
 
 .exit-logo-class {
-  display: block;
-  position: absolute;
+  position: sticky;
   top: 50%;
-  transform: translate(0%, -50%);
-  right: 0;
+  right: 0%;
+  text-align: right;
 }
 
 #exit-about-me-link-id {
-  padding:10px;
+  padding: 20px;
   font-size: 40px;
   text-decoration: none;
   color: white;

