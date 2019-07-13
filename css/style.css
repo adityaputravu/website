@@ -8,6 +8,10 @@ h1 {
   font-family: 'Montserrat', sans-serif;
 }
 
+a {
+  color: lightblue;
+}
+
 .mid-section {
 	font-size: 220px;
 
