@@ -172,9 +172,9 @@ a {
 .blog-ecsc-2019-class {
   display: none;
   position: absolute;
-  top: 10%;
+  top: 0%;
   left: 50%;
-  transform: translate(-50%, -10%);
+  transform: translate(-50%, -0%);
   text-align: center;
   color: white;
   width: 80%;
