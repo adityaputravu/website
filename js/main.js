@@ -178,17 +178,22 @@ function openAboutMe(x){
   var elements = document.getElementById("panel-slide-id").children;
   for(var i=0; i<elements.length; i++){
     if(i == x || i == 0){
-      console.log("Chosen: " + elements[i]);
-      elements[i].style.display = "block";
+      elements[i].setAttribute('style', "display: block; -webkit-animation: fadein 1s;");
     }else{
       elements[i].style.display = "none";
     }
   }
-	document.getElementById("panel-slide-id").style.width = "93%";
+  document.getElementById("panel-slide-id").style.width = "93%";
 }
 
 function closeAboutMe(){
-	document.getElementById("panel-slide-id").style.width = "0";
+  var elements = document.getElementById("panel-slide-id").children;
+  for(var i=0; i<elements.length; i++){
+    if(elements[i].style.display == "block"){
+      elements[i].setAttribute('style', "-webkit-animation: fadeout 1s;");
+    }
+  }
+  document.getElementById("panel-slide-id").style.width = "0";
 }
 
 function setSpin(id){
